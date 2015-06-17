@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Saper</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="wraper">
+		<div id="settings">
+			<div id="new">New game</div>
+			<div id="edit">Settings</div>
+		</div>
+		<div id="header">
+			<div id="bombs"><div></div><div id="bomb_count">0</div></div>
+			<div id="time"><div></div><div id="curr_time">00:00</div></div>
+		</div>
+		<table id="plate"></table>
+	</div>
+	<div id="set">
+		<div>
+			<h1>Select difficulty</h1>
+			<input type="radio" value="easy" checked name="level">Easy (fileld: 9x9, bombs: 10)<br />
+			<input type="radio" value="hard" name="level">Hard (fileld: 16x16, bombs: 40)<br />
+			<input type="radio" value="professional" name="level">Professional (fileld: 16x30, bombs: 99)<br />
+			<input type="radio" value="custom" name="level" id="custom">Custom<br />
+			<div class="custom">
+				<div>Width (9-24) </div><input onkeypress='return event.charCode >= 48 && event.charCode <= 57' type="number" id="custom_width">
+			</div>
+			<div class="custom">
+				<div>Height (9-30) </div><input onkeypress='return event.charCode >= 48 && event.charCode <= 57' type="number" id="custom_height">
+			</div>
+			<div class="custom">
+				<div>Bombs (10-668) </div><input onkeypress='return event.charCode >= 48 && event.charCode <= 57' type="number" id="custom_bomb">
+			</div>
+			<div class="button" id="ok">Save</div>
+			<div class="button" id="cancel">Cancel</div>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+</body>
+</html>
